@@ -1,6 +1,9 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
+# ==========================================
+# MyFlow - Git Ignore
+# ==========================================
+
+# Dependencies
 node_modules/
 
 # Expo
@@ -9,33 +12,70 @@ dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# Native generated folders
+/ios
+
+# Android generated files (keep native source code)
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+android/.cxx/
+
+# Kotlin
 .kotlin/
-*.orig.*
+
+# Native signing keys and certificates
 *.jks
+*.keystore
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.pem
+
+# Other native temporary files
+*.orig.*
 
 # Metro
 .metro-health-check*
+.metro/
 
-# debug
+# Debug logs
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.log
 
 # macOS
 .DS_Store
-*.pem
 
-# local env files
-.env*.local
+# Windows
+Thumbs.db
+Desktop.ini
 
-# typescript
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env*.example
+
+# TypeScript
 *.tsbuildinfo
 
-# generated native folders
-/ios
-/android
+# IDE settings
+.idea/
+.vscode/
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# EAS local files
+.eas/
+
+
+# Local backup files
+*.bak
